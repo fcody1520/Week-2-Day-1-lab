@@ -329,10 +329,15 @@ const employees = [
 */
 
 function employeeUpdater(){
-  for (theo of employees){
-    delete employees[theo];
-    
+  for (let i=0; i< employees.length; i++){
+    if (employees[i].firstName === 'Theo'){
+      employees.splice(i, 1)
+    }
+    if (employees[i].firstName === 'Lorie'){
+     employees[i].department = 'HR' 
+    }
   }
+  return employees
 }
 /// ////////////// PROBLEM 16 ///////////////////
 
@@ -359,8 +364,9 @@ const cat = {
 */
 
 //Code Here
-let grumpyActivity;
-let fluffy2ndFriend;
+let grumpyActivity = cat.catFriends[0].activities[1];
+let fluffy2ndFriend = cat.catFriends[1].name;
+
 
 /// ////////////// PROBLEM 17 ///////////////////
 
@@ -398,7 +404,9 @@ const myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+
+
+
 
 /// ////////////// PROBLEM 18 ///////////////////
 
