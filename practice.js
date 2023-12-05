@@ -142,7 +142,10 @@ function double (obj){
 */
 
 function showValues(obj) {
-  //Code Here
+  let concatString = ''
+  for (something in obj){
+    concatString += obj[something]
+  }return concatString
 }
 
 /// ////////////// PROBLEM 8 ///////////////////
@@ -153,7 +156,15 @@ function showValues(obj) {
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard (cardNumber, expirationDate, securityCode){
+  return{
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  }
+}
+
+
 
 /// ////////////// PROBLEM 9 ///////////////////
 
@@ -162,7 +173,12 @@ function showValues(obj) {
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword(obj){
+  delete obj.password
+  return obj
+}
+
+
 
 /// ////////////// PROBLEM 10 ///////////////////
 
@@ -179,7 +195,8 @@ const deleteTheBigNumbers = {
   Write a for...in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+
+
 
 /*
   Once you complete a problem, refresh ./destructuring.html in your browser and check to see if the problem's test(s) are passing.
