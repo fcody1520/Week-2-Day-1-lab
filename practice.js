@@ -44,7 +44,7 @@ const favoriteThings = {
   and then another key named 'brand' with the value being your favorite brand.
 */
 
-favoriteThings.car = 'Newer Ford Bronco'
+favoriteThings.car = 'Ford Bronco Badlands'
 favoriteThings.brand = 'Samsung'
 
 //Code here
@@ -195,7 +195,11 @@ const deleteTheBigNumbers = {
   Write a for...in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-
+for (bye in deleteTheBigNumbers){
+  if (deleteTheBigNumbers[bye] > 100){
+    delete deleteTheBigNumbers[bye]
+  }
+}
 
 
 /*
@@ -221,7 +225,9 @@ const carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables.
 */
 
-//Code Here
+let {color, make, model, year} = carDetails
+
+
 
 /// ////////////// PROBLEM 12 ///////////////////
 
@@ -232,7 +238,9 @@ const carDetails = {
 */
 
 function greeting(obj) {
-  //Code Here
+
+  let {title, firstName, lastName} = obj
+
 
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -249,7 +257,12 @@ function greeting(obj) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj){
+  let { utah, california, texas, arizona } = obj;
+  return utah + california + texas + arizona
+}
+
+
 
 /// ////////////// PROBLEM 14 ///////////////////
 
@@ -261,7 +274,15 @@ function greeting(obj) {
   Return false otherwise.
 */
 
-//Code Here
+function usCanadaBorder([latitude, longitude]){
+  if (latitude === 49 && longitude >= -123 && longitude <= -95){
+    return true
+  } else {
+    return false
+  }
+}
+
+
 
 /// ////////////// PROBLEM 15 ///////////////////
 
@@ -307,8 +328,12 @@ const employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
-
+function employeeUpdater(){
+  for (theo of employees){
+    delete employees[theo];
+    
+  }
+}
 /// ////////////// PROBLEM 16 ///////////////////
 
 // Do not edit the code below.
